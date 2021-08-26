@@ -1,7 +1,6 @@
-from tools import file_loader
-import os
-import pickle
+from objects.Pitch import *
 
-fs = os.listdir(r'C:\_MAIN\open_source\music_analyser\constants')
+#file_loader.write(all_pitches,'basic_pitches.yaml')
 
-file_loader.write(all_pitches,'basic_pitches.yaml')
+for i in range(130):
+	print(i, Pitch(i).octave(), Pitch(i).notename())
