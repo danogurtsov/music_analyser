@@ -1,4 +1,4 @@
-from tools import file_loader
+from . import file_loader
 
 class Constants (object):
 	def __init__ (self):
@@ -11,6 +11,9 @@ class Constants (object):
 		self.octaves   = self.read_constant('basic_octaves')
 		self.pitches   = self.read_constant('basic_pitches')
 		self.notenames = self.read_constant('basic_notenames')
+
+		self.maxpitch = max(self.pitches)
+		self.minpitch = min(self.pitches)
 	
 	def read_constant (self,_name:str):
 		return file_loader.read(self.path_constants+r'\{}'.format(_name))

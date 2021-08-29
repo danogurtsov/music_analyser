@@ -1,4 +1,4 @@
-from tools._external_imports import *
+import yaml
 
 def write (_object, _path:str):
 	_path = _path.replace('.yaml','')+'.yaml'
