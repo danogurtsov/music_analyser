@@ -1,6 +1,9 @@
 from tools.constants import *
 
 class Pitch (int):
+	# octave
+	# notename
+
 	def __init__ (self, _num:int):
 		self.value = _num
 	@property
@@ -16,16 +19,16 @@ class Pitch (int):
 		assert _target > CONSTANTS.minpitch, 'min pitch underflow'
 	
 	def __add__(self, _val):
-		print('boom')
 		res = self.value + _val
 		self.check(res)
 		return Pitch(res)
 
 	def __sub__(self, _val):
-		print('boom2')
 		res = self.value - _val
 		self.check(res)
 		return Pitch(res)
+
+
 
 
 
