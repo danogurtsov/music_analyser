@@ -8,6 +8,7 @@ class Note (object):
 	# velocity
 	def __init__(self, pitch, starttime, duration, velocity):
 		self.pitch = Pitch(pitch)
+		self.starttime = starttime
 		self.duration = duration
 		self.velocity = velocity
 	
