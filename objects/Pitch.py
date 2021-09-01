@@ -6,6 +6,7 @@ class Pitch (int):
 
 	def __init__ (self, _num:int):
 		self.value = _num
+		self.check(self.value)
 	@property
 	def octave(self):
 		res = self / len(CONSTANTS.notenames) + CONSTANTS.zeropitch[1]
