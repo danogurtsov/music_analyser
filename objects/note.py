@@ -11,6 +11,7 @@ class Note (object):
 		self.starttime = starttime
 		self.duration = duration
 		self.velocity = velocity
+		self.check()
 	
 	@property
 	def octave(self):
@@ -18,5 +19,9 @@ class Note (object):
 	@property
 	def notename(self):
 		return self.pitch.notename
+
+	def check(self):
+		assert self.pitch.check()
+		assert self.starttime >= 0 and self.starttime < 1
 	
 	

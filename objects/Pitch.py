@@ -6,7 +6,7 @@ class Pitch (int):
 
 	def __init__ (self, _num:int):
 		self.value = _num
-		self.check(self.value)
+		self.check()
 	@property
 	def octave(self):
 		res = self / len(CONSTANTS.notenames) + CONSTANTS.zeropitch[1]
@@ -15,20 +15,23 @@ class Pitch (int):
 	def notename(self):
 		return CONSTANTS.notenames[self % len(CONSTANTS.notenames)]
 	
-	def check(self, _target):
-		assert _target < CONSTANTS.maxpitch, 'max pitch overflow'
-		assert _target > CONSTANTS.minpitch, 'min pitch underflow'
+	def check(self):
+		assert self < CONSTANTS.maxpitch, 'max pitch overflow'
+		assert self > CONSTANTS.minpitch, 'min pitch underflow'
 	
 	def __add__(self, _val):
-		res = self.value + _val
-		self.check(res)
-		return Pitch(res)
+		before = self.value
+		after = before + _val
+		res = Pitch(after)
+		res.check()
+		return res
 
 	def __sub__(self, _val):
-		res = self.value - _val
-		self.check(res)
-		return Pitch(res)
-
+		before = self.value
+		after = before - _val
+		res = Pitch(after)
+		res.check()
+		return res
 
 
 
