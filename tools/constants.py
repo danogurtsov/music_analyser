@@ -8,9 +8,10 @@ class Constants (object):
 		self.path_constants = self.path_root + r'\constants'
 		self.path_tools = self.path_root + r'\tools'
 	
-		self.octaves   = self.read_constant('basic_octaves')
-		self.pitches   = self.read_constant('basic_pitches')
-		self.notenames = self.read_constant('basic_notenames')
+		self.octaves    = self.read_constant('basic_octaves')
+		self.pitches    = self.read_constant('basic_pitches')
+		self.notenames  = self.read_constant('basic_notenames')
+		self.velocities = self.read_constant('basic_velocities') 
 
 		self.zeropitch = ['C', -1]
 		self.maxpitch = max(self.pitches)

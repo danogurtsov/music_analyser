@@ -14,8 +14,8 @@ def read (_path:str):
 #write(n,'basic_velocities')
 
 
-mid = MidiFile('bwv0202.mid')
-tracks = mid.tracks
+#mid = MidiFile('bwv0202.mid')
+#tracks = mid.tracks
 
-for t in tracks:
-	print(len(t))
+n = CONSTANTS.velocities
+print(n)
