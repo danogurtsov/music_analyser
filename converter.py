@@ -1,4 +1,5 @@
 from objects.pitch import *
+from objects.note import *
 from tools.constants import *
 from tools.file_loader import *
 
@@ -17,5 +18,4 @@ def read (_path:str):
 #mid = MidiFile('bwv0202.mid')
 #tracks = mid.tracks
 
-n = CONSTANTS.velocities
-print(n)
+n = Note(55,0,0.5,50)

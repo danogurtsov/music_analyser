@@ -1,11 +1,8 @@
-from . import Pitch
+from .pitch import *
+from tools.constants import *
 
 
 class Note (object):
-	# pitch
-	# starttime
-	# duration
-	# velocity
 	def __init__(self, pitch, starttime, duration, velocity):
 		self.pitch = Pitch(pitch)
 		self.starttime = starttime
@@ -21,7 +18,8 @@ class Note (object):
 		return self.pitch.notename
 
 	def check(self):
-		assert self.pitch.check()
+		self.pitch.check()
 		assert self.starttime >= 0 and self.starttime < 1
+		assert self.velocity in CONSTANTS.velocities
 	
 	

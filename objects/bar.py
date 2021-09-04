@@ -1,4 +1,4 @@
-from . import Note
+from .notes import *
 
 class Bar (object):
 	def __init__(self, _notes):

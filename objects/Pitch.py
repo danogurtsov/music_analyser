@@ -16,6 +16,7 @@ class Pitch (int):
 		return CONSTANTS.notenames[self % len(CONSTANTS.notenames)]
 	
 	def check(self):
+		None
 		assert self < CONSTANTS.maxpitch, 'max pitch overflow'
 		assert self > CONSTANTS.minpitch, 'min pitch underflow'
 	
