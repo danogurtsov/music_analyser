@@ -3,7 +3,7 @@ from tools.constants import *
 
 
 class Note (object):
-	def __init__(self, pitch, starttime, duration, velocity):
+	def __init__(self, pitch, velocity=65, starttime=0, duration=1):
 		self.pitch = Pitch(pitch)
 		self.starttime = starttime
 		self.duration = duration

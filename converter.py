@@ -19,3 +19,5 @@ def read (_path:str):
 #tracks = mid.tracks
 
 n = Note(55,0,0.5,50)
+print(dir(n))
+print(n.__str__())
