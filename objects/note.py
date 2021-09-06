@@ -22,4 +22,6 @@ class Note (object):
 		assert self.starttime >= 0 and self.starttime < 1
 		assert self.velocity in CONSTANTS.velocities
 	
+	def __str__(self):
+		return 'Note {}: pitch={}, vel={}, st={}, dur={}'.format(self.notename,self.pitch,self.velocity,self.starttime,self.duration)
 	
