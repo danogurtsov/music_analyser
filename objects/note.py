@@ -3,11 +3,11 @@ from tools.constants import *
 
 
 class Note (object):
-	def __init__(self, pitch, velocity=65, starttime=0, duration=1):
-		self.pitch = Pitch(pitch)
-		self.starttime = starttime
-		self.duration = duration
-		self.velocity = velocity
+	def __init__(self, p, v=65, st=0, d=1):
+		self.pitch = Pitch(p)
+		self.starttime = st
+		self.duration = d
+		self.velocity = v
 		self.check()
 	
 	@property
@@ -16,6 +16,18 @@ class Note (object):
 	@property
 	def notename(self):
 		return self.pitch.notename
+	@property
+	def p(self):
+		return self.pitch
+	@property
+	def v(self):
+		return self.velocity
+	@property
+	def st(self):
+		return self.starttime
+	@property
+	def d(self):
+		return self.duration
 
 	def check(self):
 		self.pitch.check()
@@ -23,7 +35,7 @@ class Note (object):
 		assert self.velocity in CONSTANTS.velocities
 	
 	def __str__(self):
-		return 'Note {}: pitch={}, vel={}, st={}, dur={}'.format(
+		return '<<Note {}: p={}, v={}, st={}, d={}>>'.format(
 			self.notename,
 			self.pitch,
 			self.velocity,

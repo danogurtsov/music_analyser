@@ -1,19 +1,26 @@
-from .notes import *
+from .note import *
 
-class Bar (object):
-	def __init__(self, _notes):
-		for n in _notes:
-			assert isinstance(n, Note), "Bar init: some notes inputed are not Notes"
-		self.notes = _notes
-
-class Bar (dict):
-	def __init__(self, _notes):
-		# как для каждой ноты тут должно появиться время?
-		self.notes = _notes
-
+class Bar (list):
+	def __init__(self, _notes=[]):
+		if len(_notes) > 0:
+			for n in _notes:
+				assert isinstance(n, Note), "Bar init: some notes inputed are not Notes"
 	@property
-	def notes (self):
+	def notes(self):
+		return self
+
+	def __str__(self):
+		if len(self.notes) > 0:
+			entry = ''
+			for k in range(len(self)):
+				if k != 0: entry += ', '
+				
+				entry += n.__str__()
+		else: 
+			entry = '<< empty >>'
+		return 'BAR [{}]'.format(entry)
 
 
-	def is_full(self):
-		assert len(self.notes) == len(self.starttimes)
+				
+
+

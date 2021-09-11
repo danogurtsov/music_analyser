@@ -1,5 +1,6 @@
 from objects.pitch import *
 from objects.note import *
+from objects.bar import *
 from tools.constants import *
 from tools.file_loader import *
 
@@ -18,6 +19,13 @@ def read (_path:str):
 #mid = MidiFile('bwv0202.mid')
 #tracks = mid.tracks
 
-n = Note(55,0,0.5,50)
-print(dir(n))
-print(n)
+n1 = Note(p=55, v=65, st=0.5, d=1) 
+n2 = Note(p=53, v=63, st=0, d=1)
+
+b = Bar()
+
+print(b)
+
+b.append([n1,n2])
+
+print(b)
