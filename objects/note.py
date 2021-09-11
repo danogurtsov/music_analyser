@@ -23,5 +23,10 @@ class Note (object):
 		assert self.velocity in CONSTANTS.velocities
 	
 	def __str__(self):
-		return 'Note {}: pitch={}, vel={}, st={}, dur={}'.format(self.notename,self.pitch,self.velocity,self.starttime,self.duration)
+		return 'Note {}: pitch={}, vel={}, st={}, dur={}'.format(
+			self.notename,
+			self.pitch,
+			self.velocity,
+			self.starttime,
+			self.duration)
 	

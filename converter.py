@@ -20,4 +20,4 @@ def read (_path:str):
 
 n = Note(55,0,0.5,50)
 print(dir(n))
-print(n.__str__())
+print(n)
