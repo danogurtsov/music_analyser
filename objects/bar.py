@@ -12,10 +12,10 @@ class Bar (list):
 	def __str__(self):
 		if len(self.notes) > 0:
 			entry = ''
-			for k in range(len(self)):
+			for k in range(len(self[0])):
 				if k != 0: entry += ', '
 				
-				entry += n.__str__()
+				entry += self[0][k].__str__()
 		else: 
 			entry = '<< empty >>'
 		return 'BAR [{}]'.format(entry)
