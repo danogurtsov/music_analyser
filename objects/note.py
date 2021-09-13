@@ -16,6 +16,7 @@ class Note (object):
 	@property
 	def notename(self):
 		return self.pitch.notename
+		
 	@property
 	def p(self):
 		return self.pitch
